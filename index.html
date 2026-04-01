@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-wrap {
+      width: min(640px, 88vw);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-wrap">
+    <img src="logo.svg" alt="Logo" />
+  </div>
+</body>
+</html>
